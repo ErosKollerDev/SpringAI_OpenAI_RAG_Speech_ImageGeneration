@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: OpenAI
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){blue} %clr(%5p){yellow} %clr([%15.15t]){green} %clr(%-40.40logger{39}){cyan} %clr(:){red} %m%n"
