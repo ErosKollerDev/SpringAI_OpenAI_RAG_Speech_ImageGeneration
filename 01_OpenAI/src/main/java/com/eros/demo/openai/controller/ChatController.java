@@ -25,6 +25,6 @@ public class ChatController {
     @GetMapping("/chat")
     public ResponseEntity<String> chat(@RequestParam String message) {
         String content = this.chatClient.prompt(message).call().content();
-        return ResponseEntity.ok("Chat -> %s, Answer: %s".formatted(message, content));
+        return ResponseEntity.ok("Chat -> %s\nAnswer: %s".formatted(message, content));
     }
 }

@@ -2,8 +2,24 @@ spring:
   application:
     name: OpenAI
   ai:
+
+# OPENAI
     openai:
       api-key: ${OPENAI_API_KEY}
+
+# GEMMA3
+#    model:
+#      chat: ollama
+#    ollama:
+#      chat:
+#        model: gemma3:latest
+
+# LLAMA3
+#    model:
+#      chat: ollama
+#    ollama:
+#      chat:
+#        model: llama3.2:1b
 logging:
   pattern:
     console: "%clr(%d{HH:mm:ss.SSS}){blue} %clr(%5p){yellow} %clr([%15.15t]){green} %clr(%-40.40logger{39}){cyan} %clr(:){red} %m%n"
