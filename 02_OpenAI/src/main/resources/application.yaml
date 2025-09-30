@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: OpenAITwo
+  ai:
+#    model:
+#      chat: bedrock
+    bedrock:
+      aws:
+        region: us-east-1
+        timeout: 5m
+        access-key: ${AWS_ACCESS_KEY_ID}
+        secret-key: ${AWS_SECRET_ACCESS_KEY}
+
+
+      converse:
+        chat:
+          options:
+            model: global.anthropic.claude-sonnet-4-5-20250929-v1:0
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){blue} %clr(%5p){yellow} %clr([%15.15t]){green} %clr(%-40.40logger{39}){cyan} %clr(:){red} %m%n"
