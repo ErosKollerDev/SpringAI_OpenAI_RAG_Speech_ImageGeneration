@@ -1,4 +1,4 @@
-package com.eros.demo.openai.controller;
+package com.eros.demo.openai.multi.controller;
 
 
 import lombok.AllArgsConstructor;
