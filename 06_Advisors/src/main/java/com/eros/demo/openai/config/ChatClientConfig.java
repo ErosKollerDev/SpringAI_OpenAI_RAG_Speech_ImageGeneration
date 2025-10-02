@@ -41,6 +41,21 @@ public class ChatClientConfig {
                 .build();
     }
 
+
+
+    @Bean(name = "openAiClientVanilla")
+    public ChatClient openAiClientVanilla() {
+        ChatOptions chatOptions = ChatOptions.builder()
+//                .temperature(0.8)
+                .model("gpt-4.1-mini")
+//                .maxTokens(100)
+                .build();
+        return ChatClient.builder(openAiChatModel)
+                .defaultOptions(chatOptions)
+                .build();
+    }
+
+
 //    @Bean(name = "ollamaAiClient")
 //    public ChatClient ollamaAiClient() {
 //        ChatClient.Builder builder = ChatClient.builder(ollamaChatModel);
