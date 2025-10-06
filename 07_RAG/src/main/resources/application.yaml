@@ -1,0 +1,79 @@
+
+
+spring:
+  application:
+    name: SpringAIWithRAG
+  ai:
+    # OPENAI
+    openai:
+      api-key: ${OPENAI_API_KEY}
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
+            schema: classpath:schema/schema-h2db.sql
+    vectorstore:
+      qdrant:
+        host: localhost
+        port: 6334
+        initialize-schema: true
+        collection-name: erosvectorstore
+  docker:
+    compose:
+      stop:
+        timeout: 10s
+        command: down
+      start:
+        command: up
+
+  datasource:
+    url: jdbc:h2:file:./chatmemory
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+#  sql:
+#    init:
+#      mode: always
+#      schema-locations: classpath:schema-h2db.sql
+
+#      chat:
+#        options:
+#          model: gpt-3.5-turbo:0125
+#          max-tokens: 200
+# GEMMA3
+#    model:
+#      chat: ollama
+#    ollama:
+#      chat:
+#        model: gemma3:latest
+
+# LLAMA3
+#    model:
+#      chat: ollama
+#    ollama:
+#      chat:
+#        model: llama3.2:1b
+#    chat:
+#      client:
+#        enabled: false
+
+
+# Configure log colors
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){blue} %highlight(%5p) %clr([%15.15t]){green} %clr(%-40.40logger{39}){cyan} %clr(:){red} %m%n%throwable"
+#    level:
+#      error: red
+#      warn: yellow
+#      info: green
+#      debug: cyan
+#      trace: white
+#logging.level.org.springframework.ai.chat.client.advisor: DEBUG
+  level:
+    org.springframework.ai.chat.client.advisor: DEBUG
+    com.eros.demo.openai.advisors: DEBUG
