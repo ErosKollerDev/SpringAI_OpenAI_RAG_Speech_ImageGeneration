@@ -25,9 +25,15 @@ public class TimeChatClientConfig {
         Advisor tokenUsageAdvisor = new TokenUsageAuditAdvisor();
         Advisor memoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
         return chatClientBuilder
-                .defaultTools(timeTools,weatherTools)
-                .defaultAdvisors(List.of(loggerAdvisor, memoryAdvisor,tokenUsageAdvisor))
+                .defaultTools(timeTools, weatherTools)
+                .defaultAdvisors(List.of(loggerAdvisor, memoryAdvisor, tokenUsageAdvisor))
                 .build();
     }
+
+
+//    @Bean
+//    ToolExecutionExceptionProcessor toolExecutionExceptionProcessor() {
+//        return new DefaultToolExecutionExceptionProcessor(true);
+//    }
 
 }

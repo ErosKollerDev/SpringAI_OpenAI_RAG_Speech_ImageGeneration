@@ -1,12 +1,8 @@
 package com.eros.demo.openai.config;
 
 import com.eros.demo.openai.advisors.TokenUsageAuditAdvisor;
-import com.eros.demo.openai.service.HelpDeskService;
-import com.eros.demo.openai.tools.HelpDeskTools;
 import com.eros.demo.openai.tools.TimeTools;
 import com.eros.demo.openai.tools.WeatherTools;
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
