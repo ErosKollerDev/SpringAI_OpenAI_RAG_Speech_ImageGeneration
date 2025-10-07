@@ -7,6 +7,9 @@ spring:
     # OPENAI
     openai:
       api-key: ${OPENAI_API_KEY}
+#      embedding:
+#        options:
+#          model: text-embedding-3-small
     chat:
       memory:
         repository:
@@ -36,6 +39,9 @@ spring:
     console:
       enabled: true
       path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
 #  sql:
 #    init:
 #      mode: always

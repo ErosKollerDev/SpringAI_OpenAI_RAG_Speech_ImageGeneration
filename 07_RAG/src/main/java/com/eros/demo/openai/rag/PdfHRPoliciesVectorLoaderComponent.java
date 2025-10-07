@@ -15,14 +15,14 @@ import java.util.List;
 
 @Slf4j
 @Component
-public class PdfHRPoliciesLoader {
+public class PdfHRPoliciesVectorLoaderComponent {
 
     private final VectorStore vectorStore;
 
     @Value( "classpath:Eazybytes_HR_Policies.pdf")
     Resource policyFile;
 
-    public PdfHRPoliciesLoader(VectorStore vectorStore) {
+    public PdfHRPoliciesVectorLoaderComponent(VectorStore vectorStore) {
         this.vectorStore = vectorStore;
     }
 
@@ -31,7 +31,7 @@ public class PdfHRPoliciesLoader {
         TikaDocumentReader tikaDocumentReader = new TikaDocumentReader(policyFile);
         List<Document> documentList = tikaDocumentReader.get();
         List<Document> split = TokenTextSplitter.builder().withChunkSize(100).withMaxNumChunks(400).build().split(documentList);
-        this.vectorStore.add(split);
+         this.vectorStore.add(split);
     }
 
 }

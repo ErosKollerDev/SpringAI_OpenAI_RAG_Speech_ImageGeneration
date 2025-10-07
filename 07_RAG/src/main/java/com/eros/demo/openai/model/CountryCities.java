@@ -1,4 +1,4 @@
-package com.eros.demo.openai.entity;
+package com.eros.demo.openai.model;
 
 import java.util.List;
 

@@ -6,10 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.rag.Query;
 import org.springframework.ai.rag.retrieval.search.DocumentRetriever;
-import org.springframework.ai.vectorstore.VectorStore;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
-import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestClient;
@@ -18,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-public class WebSearchDocumentRetriever implements DocumentRetriever {
+public class WebSearchTavilyDocumentRetriever implements DocumentRetriever {
 
 
     private static final String TAVILY_API_KEY = "TAVILY_API_KEY";
@@ -27,7 +24,7 @@ public class WebSearchDocumentRetriever implements DocumentRetriever {
     private int resultLimit;
     private final RestClient restClient;
 
-    public WebSearchDocumentRetriever(RestClient.Builder clientBuilder, int resultLimit) {
+    public WebSearchTavilyDocumentRetriever(RestClient.Builder clientBuilder, int resultLimit) {
         Assert.notNull(clientBuilder, "clientBuilder cannot be null");
         String apiKey = System.getenv(TAVILY_API_KEY);
 
@@ -118,8 +115,8 @@ public class WebSearchDocumentRetriever implements DocumentRetriever {
             return this;
         }
 
-        public WebSearchDocumentRetriever build() {
-            return new WebSearchDocumentRetriever(clientBuilder, resultLimit);
+        public WebSearchTavilyDocumentRetriever build() {
+            return new WebSearchTavilyDocumentRetriever(clientBuilder, resultLimit);
         }
     }
 }

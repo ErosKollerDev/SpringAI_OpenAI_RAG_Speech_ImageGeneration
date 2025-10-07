@@ -1,4 +1,4 @@
-package com.eros.demo.openai.rag;
+package com.eros.demo.openai.processor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
