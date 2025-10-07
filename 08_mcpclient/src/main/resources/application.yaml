@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: mcpclient
+  ai:
+    # OPENAI
+    openai:
+      api-key: ${OPENAI_API_KEY}
+
+# Configure log colors
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){blue} %highlight(%5p) %clr([%15.15t]){green} %clr(%-40.40logger{39}){cyan} %clr(:){red} %m%n%throwable"

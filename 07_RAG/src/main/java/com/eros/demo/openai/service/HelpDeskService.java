@@ -4,7 +4,6 @@ package com.eros.demo.openai.service;
 import com.eros.demo.openai.entity.HelpDeskTicket;
 import com.eros.demo.openai.model.TicketRequest;
 import com.eros.demo.openai.repository.HelpDeskTicketRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
