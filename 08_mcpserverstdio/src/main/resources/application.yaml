@@ -1,14 +1,11 @@
 spring:
   application:
-    name: mcpclient
+    name: mcpserverstdio
   ai:
     # OPENAI
-    openai:
-      api-key: ${OPENAI_API_KEY}
-    mcp:
-      client:
-        stdio:
-          servers-configuration: classpath:mcp-servers.json
+#    openai:
+#      api-key: ${OPENAI_API_KEY}
+
 
 # Configure log colors
 logging:

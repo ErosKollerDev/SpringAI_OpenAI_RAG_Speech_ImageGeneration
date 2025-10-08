@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/home/eros/Projects/Learning/SpringBoot/SpringAI/mcp_dir"
+      ]
+    },
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
+      }
+    }
+  }
+}
