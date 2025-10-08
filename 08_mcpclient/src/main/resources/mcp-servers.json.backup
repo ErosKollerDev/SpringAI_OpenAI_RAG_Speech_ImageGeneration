@@ -19,7 +19,7 @@
         "ghcr.io/github/github-mcp-server"
       ],
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "not-a-real-token"
       }
     },
     "spring-ai-mcp": {
