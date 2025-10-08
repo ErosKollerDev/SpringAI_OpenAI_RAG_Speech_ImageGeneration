@@ -9,6 +9,9 @@ spring:
       client:
         stdio:
           servers-configuration: classpath:mcp-servers.json
+        sse:
+          connections.eazybites:
+             url: http://localhost:8090
 
 # Configure log colors
 logging:

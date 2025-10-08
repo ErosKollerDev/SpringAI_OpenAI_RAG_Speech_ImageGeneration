@@ -4,6 +4,7 @@ package com.eroskoller.ai.mcpclient.controller;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.tool.ToolCallbackProvider;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,8 +24,8 @@ public class MCPClientController {
     }
 
     @RequestMapping("/chat")
-    public String chat(@RequestParam String message) {
-        return chatClient.prompt(message).call().content();
+    public String chat(@RequestHeader(required = true) String username, @RequestParam String message) {
+        return chatClient.prompt(message+"| username is "+username).call().content();
     }
 
 }

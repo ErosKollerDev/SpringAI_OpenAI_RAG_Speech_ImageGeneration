@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eroskoller.ai</groupId>
-	<artifactId>08_mcpserverstdio</artifactId>
+	<artifactId>08_mcpserverremote</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>08_mcpserverstdio</name>
-	<description>MCP Server Model Context Protocol Demo</description>
+	<name>08_mcpserverremote</name>
+	<description>MCP Server Model Context Protocol Using Remote Invocation</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -41,7 +41,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
-			<artifactId>spring-ai-starter-mcp-server</artifactId>
+			<artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
 		</dependency>
 
 		<dependency>

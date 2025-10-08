@@ -1,4 +1,4 @@
-package com.eroskoller.ai.__mcpserverstdio;
+package com.eroskoller.ai.mcpserverremote;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

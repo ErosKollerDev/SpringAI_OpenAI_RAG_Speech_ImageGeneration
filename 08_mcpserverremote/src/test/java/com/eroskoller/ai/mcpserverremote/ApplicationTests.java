@@ -1,4 +1,4 @@
-package com.eroskoller.ai.__mcpserverstdio;
+package com.eroskoller.ai.mcpserverremote;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
