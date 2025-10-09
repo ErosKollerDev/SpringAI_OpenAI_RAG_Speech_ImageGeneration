@@ -5,8 +5,11 @@ spring:
     openai:
       api-key: ${OPENAI_API_KEY}
 
+#logging:
+#  pattern:
+#    console: "%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n"
 logging:
   pattern:
-    console: %green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n
+    console: "%clr(%d{HH:mm:ss.SSS}){blue} %clr(%5p){yellow} %clr([%15.15t]){green} %clr(%-40.40logger{39}){cyan} %clr(:){red} %m%n"
   level:
     org.springframework.ai.chat.client.advisor: DEBUG

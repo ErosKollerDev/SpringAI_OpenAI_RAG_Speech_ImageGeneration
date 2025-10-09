@@ -38,7 +38,8 @@ public class SelfEvaluatingChatController {
     public String chat(@RequestParam("message") String message) {
         String aiResponse = chatClient.prompt().user(message)
                 .call().content();
-        validateAnswer(message, aiResponse);
+        validateAnswer(message, "The capital of Brazil is Bananil");
+//        validateAnswer(message, aiResponse);
         return aiResponse;
     }
 
