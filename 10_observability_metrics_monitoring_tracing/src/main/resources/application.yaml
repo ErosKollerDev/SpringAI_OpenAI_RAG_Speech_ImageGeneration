@@ -88,3 +88,10 @@ management:
     web:
       exposure:
         include: health, metrics, prometheus
+  tracing:
+    sampling:
+      probability: 1.0
+opentelemetry:
+  exporter:
+    otlp:
+      endpoint: http://localhost:4317
